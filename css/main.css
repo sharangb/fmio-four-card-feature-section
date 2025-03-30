@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+
+:root {
+  --color-white: #ffffff;
+  --color-grey-500: #4d4f62;
+  --color-grey-400: #6a7178;
+  --color-cyan: #44d3d2;
+  --color-red: #ea5454;
+  --color-blue: #549ef2;
+  --color-orange: #fcae4a;
+}
+
+:root {
+  --len-100: 0.5rem;
+  --len-200: 1rem;
+  --len-300: 1.5rem;
+  --len-400: 2rem;
+  --len-500: 2.5rem;
+  --text-preset-1: 600 2.25rem / 1.4 'Poppins', sans-serif;
+  --text-preset-2: 200 2.25rem / 1.4 'Poppins', sans-serif;
+  --text-preset-3: 600 1.25rem / 1.35 'Poppins', sans-serif;
+  --text-preset-4: 400 0.9375rem / 1.4 'Poppins', sans-serif;
+  --text-preset-5: 400 0.8125rem / 1.6 'Poppins', sans-serif;
+}
+
+/* css reset begins */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  width: 100vw;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* css reset ends */
+
+/* selector css */
+
+body {
+  background-color: #fafafa;
+  color: var(--color-grey-500);
+  padding: 6.375rem 3.375rem;
+}
+
+main {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 4.675rem;
+}
+
+/* class css */
+
+.attribution {
+  display: none;
+}
+
+.border-top-cyan::before {
+  background-color: var(--color-cyan);
+  content: '';
+  height: 4px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.border-top-red::before {
+  background-color: var(--color-red);
+  content: '';
+  height: 4px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.border-top-orange::before {
+  background-color: var(--color-orange);
+  content: '';
+  height: 4px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.border-top-blue::before {
+  background-color: var(--color-blue);
+  content: '';
+  height: 4px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.card-wrapper {
+  display: flex;
+  gap: var(--len-400);
+  margin: 0 auto;
+  place-items: center;
+}
+
+.content {
+  background-color: var(--color-white);
+  border-radius: 0.5rem;
+  box-shadow: 0 15px 30px -11px #83a6d280;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: var(--len-400);
+  height: 250px;
+  overflow: hidden;
+  padding: var(--len-400);
+  position: relative;
+  max-width: 350px;
+}
+
+.content img {
+  align-self: flex-end;
+  height: 4rem;
+  width: 4rem;
+}
+
+.content .title {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 0.375rem;
+  letter-spacing: 0.25px;
+}
+
+.content .title h2 {
+  font: var(--text-preset-3);
+}
+
+.content .title p {
+  color: var(--color-grey-400);
+  font: var(--text-preset-5);
+}
+
+.content-wrapper {
+  display: flex;
+  flex-flow: column wrap;
+  place-items: center;
+  place-content: center;
+  gap: var(--len-400);
+}
+
+.title-wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: var(--len-200);
+  margin: 0 auto;
+  text-align: center;
+  max-width: 540px;
+}
+
+.title-wrapper span {
+  display: block;
+}
+
+.title-wrapper p {
+  font: var(--text-preset-4);
+  letter-spacing: 0.1px;
+}
+
+.title-wrapper h1 {
+  display: block;
+}
+
+.title-wrapper .title {
+  font: var(--text-preset-2);
+  letter-spacing: 0.25px;
+}
+
+.title-wrapper .title span {
+  font: var(--text-preset-1);
+}
+
+/* media queries */
+
+@media (min-width: 756px) and (max-width: 1080px) {
+  body {
+    padding: 5rem 1.875rem;
+  }
+
+  .card-wrapper {
+    flex-flow: column nowrap;
+  }
+
+  .content-wrapper {
+    flex-flow: row wrap;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 756px) {
+  :root {
+    --text-preset-1: 600 1.5rem / 1.4 'Poppins', sans-serif;
+    --text-preset-2: 200 1.5rem / 1.4 'Poppins', sans-serif;
+    --text-preset-4: 400 0.9375rem / 1.4 'Poppins', sans-serif;
+  }
+
+  body {
+    padding: 3.5rem 1.875rem;
+  }
+
+  main {
+    gap: 3.75rem;
+  }
+
+  .card-wrapper {
+    flex-flow: column nowrap;
+  }
+}
